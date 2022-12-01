@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "../styles/general.css"
+import "../styles/personal.css"
 import Info from "./info";
 
-class General extends Component{
+class Personal extends Component{
     constructor(props) {
         super(props);
 
@@ -10,9 +10,10 @@ class General extends Component{
         };
     }
     render(){
-        return (<div class="personal-information">
-            <div class="subheader">Personal Information</div>
-            <div class="personal-info">
+        return (
+        <div className="personal-information header">
+            <div className="subheader">Personal Information</div>
+            <div className="personal-info">
                 <Info info="first" text="text"/>
                 <Info info="last" text="text"/>
                 <Info info="title" text="text"/>
@@ -24,4 +25,4 @@ class General extends Component{
     }
 }
 
-export default General;
+export default Personal;

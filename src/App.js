@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./styles/app.css"
-import General from "./components/general";
+import Form from "./components/form";
 
 class App extends Component{
     constructor() {
@@ -10,9 +10,10 @@ class App extends Component{
         };
     }
     render(){
-        return (<div class="container">
+        return (
+        <div className="container">
             <div>CV Creater</div>
-            <General/>
+            <Form/>
         </div>);
     }
 }
