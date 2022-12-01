@@ -24,7 +24,7 @@ class Education extends Component{
     deleteSection(val){
         let arr = this.state.sections.slice();
         for(let i = 0; i < arr.length; i++){
-            if(arr[i].key == val){
+            if(parseInt(arr[i].key) === val){
                 arr.splice(i, 1);
             }
         }
