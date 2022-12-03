@@ -10,12 +10,16 @@ class Form extends Component{
         this.state = {
         };
     }
+    handleForm(e){
+        console.log(e)
+    }
     render(){
         return (
         <div className="From">
             <Personal/>
             <Experience/>
             <Education/>
+            <button type="submit" onClick={(e) => this.handleForm(e)}>Submit</button>
         </div>);
     }
 }
