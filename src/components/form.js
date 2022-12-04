@@ -8,19 +8,28 @@ class Form extends Component{
         super(props);
 
         this.state = {
+            info: {}
         };
     }
     handleForm(e){
-        console.log(e)
+        e.preventDefault();
+        let formData = new FormData(e.target);
+        let formProps = Object.fromEntries(formData);
+
+        this.setState({
+            info: formProps,
+        })
+        
+        console.log(this.state.info);
     }
     render(){
         return (
-        <div className="From">
+        <form className="Form" onSubmit={(e) => this.handleForm(e)}>
             <Personal/>
             <Experience/>
             <Education/>
-            <button type="submit" onClick={(e) => this.handleForm(e)}>Submit</button>
-        </div>);
+            <input type="submit" value="Submit"/>
+        </form>);
     }
 }
 
