@@ -7,21 +7,51 @@ class Personal extends Component{
         super(props);
 
         this.state = {
+            personalInfo: {
+                firstName: "",
+                lastName: "",
+                address: "",
+                phone: "", 
+                email: "",
+                summary: "",
+            }
         };
     }
-    render(){
+    render() {
         return (
-        <div className="personal-information header">
-            <div className="subheader">Personal Information</div>
-            <div className="personal-info">
-                <Info info="first" text="text"/>
-                <Info info="last" text="text"/>
-                <Info info="title" text="text"/>
-                <Info info="address" text="text"/>
-                <Info info="phone" text="text"/>
-                <Info info="e-mail" text="email"/>
-            </div>
-        </div>);
+          <div className="personal-information header">
+            <h1>{this.state.personalInfo.name}</h1>
+            <p>{this.state.personalInfo.contactDetails}</p>
+            <p>{this.state.personalInfo.summary}</p>
+    
+            <form className="personal-info">
+              <h3>Personal Information</h3>
+              <label>
+                Name:
+                <input
+                  type="text"
+                  value={this.state.personalInfo.name}
+                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, name: e.target.value }})}
+                />
+              </label>
+              <label>
+                Contact Details:
+                <input
+                  type="text"
+                  value={this.state.personalInfo.contactDetails}
+                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, contactDetails: e.target.value }})}
+                />
+              </label>
+              <label>
+                Summary:
+                <textarea
+                  value={this.state.personalInfo.summary}
+                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, summary: e.target.value }})}
+                />
+              </label>
+            </form>
+          </div>
+        );
     }
 }
 

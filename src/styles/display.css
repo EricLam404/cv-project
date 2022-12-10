@@ -1,0 +1,10 @@
+.sheet {
+  width: 100vw;
+  height: 100vh;
+  max-width: 8.5in;
+  max-height: 11in;
+  background: white;
+  box-shadow: 0 0.1in 0.1in 0 rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 0.5in;
+}
