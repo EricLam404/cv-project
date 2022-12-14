@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../styles/display.css";
+import "../styles/sheet.css";
 
 class Display extends Component {
   render() {
