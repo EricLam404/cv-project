@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../styles/personal.css"
-import Info from "./info";
 
 class Personal extends Component{
     constructor(props) {

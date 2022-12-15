@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../styles/sheet.css";
 
-class Display extends Component {
+class Sheet extends Component {
   render() {
     return (
       <div className="sheet">
@@ -11,4 +11,4 @@ class Display extends Component {
   }
 }
 
-export default Display;
+export default Sheet;
