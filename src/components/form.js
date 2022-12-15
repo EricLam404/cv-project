@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Personal from "./personal";
 import Experience from "./experience";
 import Education from "./education";
+import "../styles/info.css";
 
 class Form extends Component{
     constructor(props) {
@@ -19,7 +20,7 @@ class Form extends Component{
         this.setState({
             info: formProps,
         })
-        
+
         console.log(this.state.info);
     }
     render(){

@@ -19,11 +19,8 @@ class Personal extends Component{
     render() {
         return (
           <div className="personal-information header">
-            <h1>{this.state.personalInfo.name}</h1>
-            <p>{this.state.personalInfo.contactDetails}</p>
-            <p>{this.state.personalInfo.summary}</p>
     
-            <form className="personal-info">
+            <div className="personal-info">
               <h3>Personal Information</h3>
               <label>
                 Name:
@@ -48,10 +45,16 @@ class Personal extends Component{
                   onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, summary: e.target.value }})}
                 />
               </label>
-            </form>
+            </div>
           </div>
         );
     }
 }
 
 export default Personal;
+
+/*
+<h1>{this.state.personalInfo.name}</h1>
+            <p>{this.state.personalInfo.contactDetails}</p>
+            <p>{this.state.personalInfo.summary}</p>
+*/

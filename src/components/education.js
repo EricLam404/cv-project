@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Info from "./info";
 
 class Education extends Component{
     constructor(props) {
@@ -13,11 +12,20 @@ class Education extends Component{
     createSection(i){
         return (
         <div className={"education-info " + i} key={i}>
-            <Info info="university" text="text"/>
-            <Info info="degree" text="text"/>
-            <Info info="city" text="text"/>
-            <Info info="from" text="date"/>
-            <Info info="to" text="date"/>
+            <label htmlFor="formUniversity" className="info">University</label>
+            <input type="text" id="formUniversity" placeholder="Enter university" />
+
+            <label htmlFor="formDegree" className="info">Degree</label>
+            <input type="text" id="formDegree" placeholder="Enter degree" />
+
+            <label htmlFor="formCity" className="info">City</label>
+            <input type="text" id="formCity" placeholder="Enter city" />
+
+            <label htmlFor="formFrom" className="info">From</label>
+            <input type="date" id="formFrom" placeholder="Enter start date" />
+
+            <label htmlFor="formTo" className="info">To</label>
+            <input type="date" id="formTo" placeholder="Enter end date" />
             <button onClick={() => this.deleteSection(i)}>Delete</button>
         </div>);
     }
