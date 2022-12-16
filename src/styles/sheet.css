@@ -1,11 +1,12 @@
 .sheet {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  aspect-ratio: 8.5 / 11;
   max-width: 8.5in;
   max-height: 11in;
   background: white;
   box-shadow: 0 0.1in 0.1in 0 rgba(0, 0, 0, 0.1);
   margin: auto;
+  margin-right: 10vw;
   padding: 0.5in;
 }
 
