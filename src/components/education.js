@@ -10,8 +10,18 @@ class Education extends Component{
         };
     }
     createSection(i){
+        return {
+            university: "",
+            degree: "",
+            city: "",
+            from: "",
+            to: "",
+            id: i,
+        };
+    }
+    displaySection(section){
         return (
-        <div className={"education-info " + i} key={i}>
+        <div className={"education-info " + section.id} key={section.id}>
             <label htmlFor="formUniversity" className="info">University</label>
             <input type="text" id="formUniversity" placeholder="Enter university" />
 
@@ -26,13 +36,15 @@ class Education extends Component{
 
             <label htmlFor="formTo" className="info">To</label>
             <input type="date" id="formTo" placeholder="Enter end date" />
-            <button onClick={() => this.deleteSection(i)}>Delete</button>
-        </div>);
+            <button onClick={() => this.deleteSection(section.id)}>Delete</button>
+        </div>
+        );
     }
-    deleteSection(val){
+
+    deleteSection(val){    
         let arr = this.state.sections.slice();
         for(let i = 0; i < arr.length; i++){
-            if(parseInt(arr[i].key) === val){
+            if(parseInt(arr[i].id) === val){
                 arr.splice(i, 1);
             }
         }
@@ -50,14 +62,15 @@ class Education extends Component{
     }
 
     render(){
+        const displaySections = this.state.sections.map((section) => this.displaySection(section));
         return (
-        <div className="education-information header">
-            <div className="subheader">Education</div>
-            {this.state.sections}
-            <button onClick={() => this.addSection()}>Add</button>
+        <div className="experience-information header">
+            <div className="subheader">Experience</div>
+            {displaySections}
+            <button onClick={() => {console.log(this);this.addSection()}}>Add</button>
         </div>);
     }
-
 }
 
 export default Education;
+
