@@ -21,30 +21,24 @@ class Personal extends Component{
           <div className="personal-information header">
     
             <div className="personal-info">
-              <h3>Personal Information</h3>
-              <label>
-                Name:
+                <div>Personal Information</div>
+                <label>Name:</label>
                 <input
-                  type="text"
-                  value={this.state.personalInfo.name}
-                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, name: e.target.value }})}
+                    type="text"
+                    value={this.state.personalInfo.name}
+                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, name: e.target.value }})}
                 />
-              </label>
-              <label>
-                Contact Details:
+                <label>Contact Details:</label>
                 <input
-                  type="text"
-                  value={this.state.personalInfo.contactDetails}
-                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, contactDetails: e.target.value }})}
+                    type="text"
+                    value={this.state.personalInfo.contactDetails}
+                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, contactDetails: e.target.value }})}
                 />
-              </label>
-              <label>
-                Summary:
+                <label>Summary:</label>
                 <textarea
-                  value={this.state.personalInfo.summary}
-                  onChange={e => this.setState({ personalInfo: { ...this.state.personalInfo, summary: e.target.value }})}
+                    value={this.state.personalInfo.summary}
+                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, summary: e.target.value }})}
                 />
-              </label>
             </div>
           </div>
         );

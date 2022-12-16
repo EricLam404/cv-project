@@ -17,11 +17,6 @@ class Form extends Component{
         let formData = new FormData(e.target);
         let formProps = Object.fromEntries(formData);
 
-        this.setState({
-            info: formProps,
-        })
-
-        console.log(this.state.info);
     }
     render(){
         return (
