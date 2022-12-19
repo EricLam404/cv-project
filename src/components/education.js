@@ -65,7 +65,7 @@ class Education extends Component{
         const displaySections = this.state.sections.map((section) => this.displaySection(section));
         return (
         <div className="experience-information header">
-            <div className="subheader">Experience</div>
+            <div className="subheader">Education</div>
             {displaySections}
             <button onClick={() => {console.log(this);this.addSection()}}>Add</button>
         </div>);

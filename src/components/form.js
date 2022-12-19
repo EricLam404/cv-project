@@ -14,8 +14,8 @@ class Form extends Component{
     }
     handleForm(e){
         e.preventDefault();
-        let formData = new FormData(e.target);
-        let formProps = Object.fromEntries(formData);
+        //let formData = new FormData(e.target);
+        //let formProps = Object.fromEntries(formData);
 
     }
     render(){

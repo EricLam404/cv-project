@@ -20,10 +20,29 @@ class Experience extends Component{
         };
     }
     displaySection(section){
+        console.log(section);
         return (
         <div className={"experience-info " + section.id} key={section.id}>
             <label htmlFor="formPosition" className="info">Position</label>
-            <input type="text" id="formPosition" placeholder="Enter Position"/>
+            <input 
+                type="text" 
+                id="formPosition" 
+                placeholder="Enter Position"
+                value={section.position}
+                onChange={(e) => {
+                    console.log(section.position);
+                    let arr = this.state.sections.slice();
+                    for(let i = 0; i < arr.length; i++){
+                        if(parseInt(arr[i].id) === section.id){
+                            arr[i].position = e.target.value;
+                        }
+                    }
+                    this.setState({
+                        sections: arr,
+                        id: this.state.id,
+                    })
+                }}
+            />
 
             <label htmlFor="formCompany" className="info">Company</label>
             <input type="text" id="formCompany" placeholder="Enter Company" />
