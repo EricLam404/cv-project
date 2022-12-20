@@ -30,7 +30,6 @@ class Experience extends Component{
                 placeholder="Enter Position"
                 value={section.position}
                 onChange={(e) => {
-                    console.log(section.position);
                     let arr = this.state.sections.slice();
                     for(let i = 0; i < arr.length; i++){
                         if(parseInt(arr[i].id) === section.id){
@@ -45,16 +44,85 @@ class Experience extends Component{
             />
 
             <label htmlFor="formCompany" className="info">Company</label>
-            <input type="text" id="formCompany" placeholder="Enter Company" />
+            <input 
+                type="text" 
+                id="formCompany" 
+                placeholder="Enter Company"
+                value={section.company}
+                onChange={(e) => {
+                    let arr = this.state.sections.slice();
+                    for(let i = 0; i < arr.length; i++){
+                        if(parseInt(arr[i].id) === section.id){
+                            arr[i].company = e.target.value;
+                        }
+                    }
+                    this.setState({
+                        sections: arr,
+                        id: this.state.id,
+                    })
+                }}
+            />
 
             <label htmlFor="formCity" className="info">City</label>
-            <input type="text" id="formCity" placeholder="Enter city" />
+            <input 
+                type="text" 
+                id="formCity" 
+                placeholder="Enter City"
+                value={section.city}
+                onChange={(e) => {
+                    let arr = this.state.sections.slice();
+                    for(let i = 0; i < arr.length; i++){
+                        if(parseInt(arr[i].id) === section.id){
+                            arr[i].city = e.target.value;
+                        }
+                    }
+                    this.setState({
+                        sections: arr,
+                        id: this.state.id,
+                    })
+                }}
+            />
 
             <label htmlFor="formFrom" className="info">From</label>
-            <input type="date" id="formFrom" placeholder="Enter start date" />
+            <input 
+                type="text" 
+                id="formFrom" 
+                placeholder="Enter start date"
+                value={section.from}
+                onChange={(e) => {
+                    let arr = this.state.sections.slice();
+                    for(let i = 0; i < arr.length; i++){
+                        if(parseInt(arr[i].id) === section.id){
+                            arr[i].from = e.target.value;
+                        }
+                    }
+                    this.setState({
+                        sections: arr,
+                        id: this.state.id,
+                    })
+                }}
+            />
 
             <label htmlFor="formTo" className="info">To</label>
             <input type="date" id="formTo" placeholder="Enter end date" />
+            <input 
+                type="text" 
+                id="formTo" 
+                placeholder="Enter end date"
+                value={section.to}
+                onChange={(e) => {
+                    let arr = this.state.sections.slice();
+                    for(let i = 0; i < arr.length; i++){
+                        if(parseInt(arr[i].id) === section.id){
+                            arr[i].to = e.target.value;
+                        }
+                    }
+                    this.setState({
+                        sections: arr,
+                        id: this.state.id,
+                    })
+                }}
+            />
             <button onClick={() => this.deleteSection(section.id)}>Delete</button>
         </div>
         );
