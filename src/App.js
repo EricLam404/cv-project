@@ -4,12 +4,6 @@ import Form from "./components/form";
 import Display from "./components/sheet";
 
 class App extends Component{
-    constructor() {
-        super();
-
-        this.state = {
-        };
-    }
     render(){
         return (
         <div className="container">
