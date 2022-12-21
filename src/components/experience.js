@@ -85,7 +85,7 @@ class Experience extends Component{
 
             <label htmlFor="formFrom" className="info">From</label>
             <input 
-                type="text" 
+                type="date" 
                 id="formFrom" 
                 placeholder="Enter start date"
                 value={section.from}
@@ -104,9 +104,8 @@ class Experience extends Component{
             />
 
             <label htmlFor="formTo" className="info">To</label>
-            <input type="date" id="formTo" placeholder="Enter end date" />
             <input 
-                type="text" 
+                type="date" 
                 id="formTo" 
                 placeholder="Enter end date"
                 value={section.to}
