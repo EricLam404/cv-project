@@ -18,9 +18,6 @@ class Form extends Component{
         this.setEducation = this.setEducation.bind(this);
         this.setExperience = this.setExperience.bind(this);
     }
-    handleForm(e){
-        e.preventDefault();
-    }
 
     setPersonal(newState){
         this.setState({personal: newState})
@@ -38,7 +35,6 @@ class Form extends Component{
             <Personal setPersonal={this.setPersonal}/>
             <Experience setExperience={this.setExperience}/>
             <Education setEducation={this.setEducation}/>
-            <input type="submit" value="Submit"/>
         </form>);
     }
 }
