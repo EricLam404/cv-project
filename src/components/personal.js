@@ -6,14 +6,11 @@ class Personal extends Component{
         super(props);
 
         this.state = {
-            personalInfo: {
-                firstName: "",
-                lastName: "",
-                address: "",
-                phone: "", 
-                email: "",
-                summary: "",
-            }
+            name: "",
+            address: "",
+            phone: "", 
+            email: "",
+            summary: "",
         };
     }
     render() {
@@ -25,19 +22,56 @@ class Personal extends Component{
                 <label>Name:</label>
                 <input
                     type="text"
-                    value={this.state.personalInfo.name}
-                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, name: e.target.value }})}
+                    value={this.state.name}
+                    onChange={(e) => {
+                        this.setState(
+                            {name: e.target.value}
+                        )
+                        this.props.setPersonal(this.state);
+                    }}
                 />
-                <label>Contact Details:</label>
+                <label>Address:</label>
                 <input
                     type="text"
-                    value={this.state.personalInfo.contactDetails}
-                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, contactDetails: e.target.value }})}
+                    value={this.state.address}
+                    onChange={(e) => {
+                        this.setState(
+                            {address: e.target.value}
+                        )
+                        this.props.setPersonal(this.state);
+                    }}
+                />
+                <label>Phone:</label>
+                <input
+                    type="text"
+                    value={this.state.phone}
+                    onChange={(e) => {
+                        this.setState(
+                            {phone: e.target.value}
+                        )
+                        this.props.setPersonal(this.state);
+                    }}
+                />
+                <label>E-mail:</label>
+                <input
+                    type="email"
+                    value={this.state.email}
+                    onChange={(e) => {
+                        this.setState(
+                            {email: e.target.value}
+                        )
+                        this.props.setPersonal(this.state);
+                    }}
                 />
                 <label>Summary:</label>
                 <textarea
-                    value={this.state.personalInfo.summary}
-                    onChange={(e) => this.setState({ personalInfo: { ...this.state.personalInfo, summary: e.target.value }})}
+                    value={this.state.summary}
+                    onChange={(e) => {
+                        this.setState(
+                            {summary: e.target.value}
+                        )
+                        this.props.setPersonal(this.state);
+                    }}
                 />
             </div>
           </div>
@@ -46,9 +80,3 @@ class Personal extends Component{
 }
 
 export default Personal;
-
-/*
-<h1>{this.state.personalInfo.name}</h1>
-            <p>{this.state.personalInfo.contactDetails}</p>
-            <p>{this.state.personalInfo.summary}</p>
-*/

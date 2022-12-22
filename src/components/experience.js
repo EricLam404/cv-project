@@ -20,7 +20,6 @@ class Experience extends Component{
         };
     }
     displaySection(section){
-        console.log(section);
         return (
         <div className={"experience-info " + section.id} key={section.id}>
             <label htmlFor="formPosition" className="info">Position</label>
@@ -40,6 +39,7 @@ class Experience extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -60,6 +60,7 @@ class Experience extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -80,6 +81,7 @@ class Experience extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -100,6 +102,7 @@ class Experience extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -120,6 +123,7 @@ class Experience extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
             <button onClick={() => this.deleteSection(section.id)}>Delete</button>
@@ -138,6 +142,7 @@ class Experience extends Component{
             sections: arr,
             id: this.state.id,
         })
+        this.props.setExperience(this.state);
     }
 
     addSection(){
@@ -145,6 +150,7 @@ class Experience extends Component{
             sections: this.state.sections.concat(this.createSection(this.state.id + 1)),
             id: this.state.id + 1,
         })
+        this.props.setExperience(this.state);
     }
 
     render(){

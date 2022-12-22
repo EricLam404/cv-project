@@ -9,21 +9,35 @@ class Form extends Component{
         super(props);
 
         this.state = {
-            info: {}
+            personal: {},
+            education: {},
+            experience: {}
         };
+
+        this.setPersonal = this.setPersonal.bind(this);
+        this.setEducation = this.setEducation.bind(this);
+        this.setExperience = this.setExperience.bind(this);
     }
     handleForm(e){
         e.preventDefault();
-        //let formData = new FormData(e.target);
-        //let formProps = Object.fromEntries(formData);
-
     }
+
+    setPersonal(newState){
+        this.setState({personal: newState})
+    }
+    setEducation(newState){
+        this.setState({education: newState})
+    }
+    setExperience(newState){
+        this.setState({experience: newState})
+    }
+
     render(){
         return (
         <form className="Form" onSubmit={(e) => this.handleForm(e)}>
-            <Personal/>
-            <Experience/>
-            <Education/>
+            <Personal setPersonal={this.setPersonal}/>
+            <Experience setExperience={this.setExperience}/>
+            <Education setEducation={this.setEducation}/>
             <input type="submit" value="Submit"/>
         </form>);
     }

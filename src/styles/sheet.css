@@ -1,8 +1,6 @@
 .sheet {
-  width: 80vw;
-  aspect-ratio: 8.5 / 11;
-  max-width: 8.5in;
-  max-height: 11in;
+  width: 816px;
+  height: 1056px;
   background: white;
   box-shadow: 0 0.1in 0.1in 0 rgba(0, 0, 0, 0.1);
   margin: auto;

@@ -39,6 +39,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setEducation(this.state);
                 }}
             />
 
@@ -59,6 +60,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setEducation(this.state);
                 }}
             />
 
@@ -79,6 +81,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -100,6 +103,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -120,6 +124,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
+                    this.props.setExperience(this.state);
                 }}
             />
 
@@ -139,6 +144,7 @@ class Education extends Component{
             sections: arr,
             id: this.state.id,
         })
+        this.props.setEducation(this.state);
     }
 
     addSection(){
@@ -146,6 +152,7 @@ class Education extends Component{
             sections: this.state.sections.concat(this.createSection(this.state.id + 1)),
             id: this.state.id + 1,
         })
+        this.props.setEducation(this.state);
     }
 
     render(){
