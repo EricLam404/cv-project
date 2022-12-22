@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Personal from "./personal";
 import Experience from "./experience";
 import Education from "./education";
-import "../styles/info.css";
+import "../styles/form.css";
 
 class Form extends Component{
     constructor(props) {
@@ -31,7 +31,7 @@ class Form extends Component{
 
     render(){
         return (
-        <form className="Form" onSubmit={(e) => this.handleForm(e)}>
+        <form className="form" onSubmit={(e) => this.handleForm(e)}>
             <Personal setPersonal={this.setPersonal}/>
             <Experience setExperience={this.setExperience}/>
             <Education setEducation={this.setEducation}/>
