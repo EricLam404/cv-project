@@ -11,11 +11,11 @@ class Education extends Component{
     }
     createSection(i){
         return {
-            university: "",
-            degree: "",
-            city: "",
-            from: "",
-            to: "",
+            university: "-",
+            degree: "-",
+            city: "-",
+            from: "--/--/--",
+            to: "--/--/--",
             id: i,
         };
     }

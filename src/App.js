@@ -9,9 +9,37 @@ class App extends Component{
 
         this.state = {
             form: {
-                personal: {},
-                education: {},
-                experience: {}
+                personal: {
+                    name: "-",
+                    address: "-",
+                    phone: "###-###-####", 
+                    email: "-",
+                    summary: "-"
+                },
+                education: {
+                    sections: [
+                        {
+                            university: "-",
+                            degree: "-",
+                            city: "-",
+                            from: "--/--/--",
+                            to: "--/--/--",
+                        }
+                    ],
+                    id: 0,
+                },
+                experience: {
+                    sections: [
+                        {
+                            position: "-",
+                        company: "-",
+                        city: "-",
+                        from: "--/--/--",
+                        to: "--/--/--",
+                        }
+                    ],
+                    id: 0,
+                }
             },
         };
 

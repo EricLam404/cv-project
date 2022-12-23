@@ -11,11 +11,11 @@ class Experience extends Component{
     }
     createSection(i){
         return {
-            position: "",
-            company: "",
-            city: "",
-            from: "",
-            to: "",
+            position: "-",
+            company: "-",
+            city: "-",
+            from: "--/--/--",
+            to: "--/--/--",
             id: i,
         };
     }

@@ -9,9 +9,37 @@ class Form extends Component{
         super(props);
 
         this.state = {
-            personal: {},
-            education: {},
-            experience: {}
+            personal: {
+                name: "-",
+                address: "-",
+                phone: "###-###-####", 
+                email: "-",
+                summary: "-"
+            },
+            education: {
+                sections: [
+                    {
+                        university: "-",
+                        degree: "-",
+                        city: "-",
+                        from: "--/--/--",
+                        to: "--/--/--",
+                    }
+                ],
+                id: 0,
+            },
+            experience: {
+                sections: [
+                    {
+                        position: "-",
+                    company: "-",
+                    city: "-",
+                    from: "--/--/--",
+                    to: "--/--/--",
+                    }
+                ],
+                id: 0,
+            }
         };
 
         this.setPersonal = this.setPersonal.bind(this);

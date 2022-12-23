@@ -6,11 +6,11 @@ class Personal extends Component{
         super(props);
 
         this.state = {
-            name: "",
-            address: "",
-            phone: "", 
-            email: "",
-            summary: "",
+            name: "-",
+            address: "-",
+            phone: "###-###-####", 
+            email: "-",
+            summary: "-",
         };
     }
     render() {
