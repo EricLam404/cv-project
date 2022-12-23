@@ -2,6 +2,28 @@ import React, { Component } from "react";
 import "../styles/sheet.css";
 
 class Sheet extends Component {
+  displayEducation(section){
+      return (
+        <div>
+          <div>{"University: " + section.university}</div>
+          <div>{"Degree: " + section.degree}</div>
+          <div>{"City: " + section.city}</div>
+          <div>{"From: " + section.from}</div>
+          <div>{"To: " + section.to}</div>
+        </div>
+      );
+  }
+  displayExperience(section){
+    return (
+      <div>
+        <div>{"Position: " + section.position}</div>
+        <div>{"Company: " + section.company}</div>
+        <div>{"City: " + section.city}</div>
+        <div>{"From: " + section.from}</div>
+        <div>{"To: " + section.to}</div>
+      </div>
+    );
+}
   render() {
     console.log("personal")
     console.table(this.props.form.personal);
@@ -22,12 +44,12 @@ class Sheet extends Component {
         </div>
         <div><h1>Education section</h1>
           <div>
-
+            {this.props.form.education.sections.map((section) => this.displayEducation(section))}
           </div>
         </div>
         <div><h1>Experience section</h1>
           <div>
-
+            {this.props.form.experience.sections.map((section) => this.displayExperience(section))}
           </div>
         </div>
       </div>
