@@ -81,14 +81,13 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
-                    this.props.setExperience(this.state);
+                    this.props.setEducation(this.state);
                 }}
             />
 
             <label htmlFor="formFrom" className="info">From</label>
-            <input type="date" id="formFrom" placeholder="Enter start date" />
             <input 
-                type="text" 
+                type="date" 
                 id="formFrom" 
                 placeholder="Enter start date"
                 value={section.from}
@@ -103,13 +102,13 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
-                    this.props.setExperience(this.state);
+                    this.props.setEducation(this.state);
                 }}
             />
 
             <label htmlFor="formTo" className="info">To</label>
             <input 
-                type="text" 
+                type="date" 
                 id="formTo" 
                 placeholder="Enter end date"
                 value={section.to}
@@ -124,7 +123,7 @@ class Education extends Component{
                         sections: arr,
                         id: this.state.id,
                     })
-                    this.props.setExperience(this.state);
+                    this.props.setEducation(this.state);
                 }}
             />
 

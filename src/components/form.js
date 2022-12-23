@@ -20,18 +20,21 @@ class Form extends Component{
     }
 
     setPersonal(newState){
-        this.setState({personal: newState})
+        this.setState({personal: newState});
+        this.props.setForm(this.state);
     }
     setEducation(newState){
-        this.setState({education: newState})
+        this.setState({education: newState});
+        this.props.setForm(this.state);
     }
     setExperience(newState){
-        this.setState({experience: newState})
+        this.setState({experience: newState});
+        this.props.setForm(this.state);
     }
 
     render(){
         return (
-        <form className="form" onSubmit={(e) => this.handleForm(e)}>
+        <form className="form" onSubmit={(e) => {e.preventDefault();}}>
             <Personal setPersonal={this.setPersonal}/>
             <Experience setExperience={this.setExperience}/>
             <Education setEducation={this.setEducation}/>

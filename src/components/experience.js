@@ -146,8 +146,10 @@ class Experience extends Component{
     }
 
     addSection(){
+        let arr = this.state.sections.slice();
+        arr = arr.concat(this.createSection(this.state.id + 1));
         this.setState({
-            sections: this.state.sections.concat(this.createSection(this.state.id + 1)),
+            sections: arr,
             id: this.state.id + 1,
         })
         this.props.setExperience(this.state);
