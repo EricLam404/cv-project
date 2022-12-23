@@ -89,7 +89,6 @@ class Education extends Component{
             <input 
                 type="date" 
                 id="formFrom" 
-                placeholder="Enter start date"
                 value={section.from}
                 onChange={(e) => {
                     let arr = this.state.sections.slice();
@@ -110,7 +109,6 @@ class Education extends Component{
             <input 
                 type="date" 
                 id="formTo" 
-                placeholder="Enter end date"
                 value={section.to}
                 onChange={(e) => {
                     let arr = this.state.sections.slice();
